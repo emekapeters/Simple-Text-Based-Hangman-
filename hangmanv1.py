@@ -38,19 +38,6 @@ def beginGame() -> None:
         else:
             break
 
-"""
-def ask_user_to_play() -> None:
-    print("Well, that's perfect moment to play some Hangman!\n")
-    while True:
-        gameChoice = input("Would You?\n").upper()
-        if gameChoice == "YES" or gameChoice == "Y":
-            break
-        elif gameChoice == "NO" or gameChoice == "N":
-            sys.exit("That's a shame! Have a nice day")
-        else:
-            print("Please Answer only Yes or No")
-            continue
-"""
 
 # Hides the guessing word
 def make_guessing_word() -> None:
@@ -97,6 +84,5 @@ def start_guessing() -> None: #Main part of game
 
 if __name__ == "__main__":
     beginGame()
-    #ask_user_to_play()
     make_guessing_word()
     start_guessing()
