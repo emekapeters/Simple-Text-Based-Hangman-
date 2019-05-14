@@ -6,12 +6,16 @@
 import random, sys
 from typing import List
 
-LISTOF_WORDS = [
+"""LISTOF_WORDS = [
 "lion", "umbrella", "window", "computer", "glass", "juice", "chair", "desktop",
  "laptop", "dog", "cat", "lemon", "cabel", "mirror", "hat"
            ]
-
+"""
+f = open("words.txt", "r")
+LISTOF_WORDS = f.readlines()
 WORD2_GUESS = random.choice(LISTOF_WORDS)
+while (len(WORD2_GUESS)) < 3:
+    WORD2_GUESS = random.choice(LISTOF_WORDS)
 WORDLENGTH = len(WORD2_GUESS)
 AZ_ALPHABETS = "abcdefghijklmnopqrstuvwxyz"
 CURR_GUESS = []
